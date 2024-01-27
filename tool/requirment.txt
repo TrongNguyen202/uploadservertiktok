@@ -1,0 +1,4 @@
+pandas
+pyshorteners
+PyQt5
+pdf_path = 'C:/Users/Dell/Downloads/tool/tool/01-23_22-59-07_Shipping label.pdf'

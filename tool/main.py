@@ -177,14 +177,14 @@ class MultithreadProcessExcelApp(tk.Tk):
        
        
       
-       for index, item in zip(range(counts), row_data.items()):
-       
-        if col.startswith('images') and image_url is not None:
-           
-            row_data[col] = "https://p16-oec-ttp.tiktokcdn-us.com/" + images_ids[index]
-            print(f"Index {index}, {col}: {row_data[col]}")
+       index = 0  
 
-
+       for col, image_url in row_data.items():
+           if col.startswith('images') and image_url is not None:
+               if index < len(images_ids):
+                   row_data[col] = f"https://p16-oec-ttp.tiktokcdn-us.com/{images_ids[index]}~tplv-omjb5zjo8w-origin-jpeg.jpeg?from=520841845"
+                   index += 1
+            
        return row_data
 
 
